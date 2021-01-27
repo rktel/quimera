@@ -13,7 +13,7 @@ server.on('message', (msg, rinfo) => {
   const packetId = data.substring(10,12);
   const numberOfData = data.substring(48,50);
   const responseAck = packetId + numberOfData;
-  server.send(responseAck,rinfo.port,rinfo.address);
+  server.send(Buffer.from(responseAck),rinfo.port,rinfo.address);
  // console.log(packetId, numberOfData);
 });
 
