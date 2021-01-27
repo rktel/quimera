@@ -13,4 +13,5 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 typescript              # Enable TypeScript syntax in .ts and .tsx modules
 shell-server            # Server-side component of the `meteor shell` command
 webapp                  # Serves a Meteor app over HTTP
-server-render           # Support for server-side rendering
+# server-render           # Support for server-side rendering
+svelte:compiler
