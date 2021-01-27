@@ -14,7 +14,8 @@ server.on('message', (msg, rinfo) => {
   const numberOfData = data.substring(48,50);
   const responseAck = packetId + numberOfData;
   server.send(Buffer.from(responseAck,'hex'),rinfo.port,rinfo.address);
- // console.log(packetId, numberOfData);
+  console.log(packetId, numberOfData);
+  console.log(responseAck);
 });
 
 server.on('listening', () => {
