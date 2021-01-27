@@ -8,7 +8,11 @@ server.on('error', (err) => {
 });
 
 server.on('message', (msg, rinfo) => {
-  console.log(`server got: ${msg.toString('hex')} from ${rinfo.address}:${rinfo.port}`);
+    const data = msg.toString('hex');
+  console.log(`server got: ${data} from ${rinfo.address}:${rinfo.port}`);
+  const packetId = data.substring(10,12);
+  const numberOfData = data.substring(48,50);
+  console.log(packetId, numberOfData);
 });
 
 server.on('listening', () => {
